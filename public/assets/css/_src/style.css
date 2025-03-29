@@ -318,15 +318,16 @@ img{
 
 @media only screen and (max-width: 1200px) {
 	.hero-section-content-inner{
-        margin-left: 200px;
-    }
+		max-width: 500px;
+	}
+
+	.hero-section-content h2{
+		font-size: 40px;
+        line-height: 50px;
+	}
 }
 
 @media only screen and (max-width: 990px) {
-
-    .hero-section-content-inner{
-        margin-left: 0px;
-    }
 
     .contact-form-section{
         width: 400px;
