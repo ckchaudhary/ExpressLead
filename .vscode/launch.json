@@ -1,0 +1,28 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/app.js",
+			"env" : {
+				"APP_SUBDIR" : "",
+				"EMAIL_SENDER" : "you@smtpdomain.com",
+				"LEAD_EMAIL_RECIPIENTS" : "leads@domain.com",
+				"PORT" : "4468",
+				"SMTP_HOST" : "smtp-relay.brevo.com",
+				"SMTP_PORT" : "587",
+				"SMTP_USER": "xxxx@smtp-brevo.com",
+				"SMTP_PASS" : "xxxx",
+				"SMTP_SECURE" : "0"
+			}
+		}
+	]
+}

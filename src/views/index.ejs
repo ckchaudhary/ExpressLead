@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name=”robots” content=”noindex”>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<% if ( config.IS_PRODUCTION ) { %>
+	<!-- Google Tag Manager -->	
+	<!-- End Google Tag Manager -->
+	<% } %>
+
+	<title>Node.js + Express | Landing Page with Lead Form</title>
+	<meta name="description" content="A simple landing page built with Node.js, Express.js, HTML, CSS, and JavaScript. Features a lead form that sends submissions via email.">
+	<script src="<%= config.subdir %>/assets/js/dist.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%= config.subdir %>/assets/css/dist.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="<%= config.subdir %>/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<%= config.subdir %>/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<%= config.subdir %>/favicon-16x16.png">
+	<link rel="manifest" href="<%= config.subdir %>/site.webmanifest">
+</head>
+
+<body>
+	<% if ( config.IS_PRODUCTION ) { %>
+		<!-- Google Tag Manager (noscript) -->
+		<!-- End Google Tag Manager (noscript) -->
+	<% } %>
+
+	<div class="container-fluid"> <!-- header Section -->
+		<div class="header-section">
+			<div class="container">
+				<div class="header-logo-row">
+					<div class="logo">
+						<a href="/">
+							<img src="<%= config.subdir %>/assets/images/logo-200.jpg" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div> <!-- hero section -->
+		<div class="hero-section">
+			<div class="hero-section-slider">
+				<div class="hero-slider-img"> <img src="<%= config.subdir %>/assets/images/slide1.jpg" />
+					<div class="hero-section-content">
+						<div class="container">
+							<div class="hero-section-content-inner">
+								<h2 data-animation="lightSpeedInLeft" data-delay="0.5s">Seamless Shipping, Anywhere in the World</h2>
+								<p class="subtext" data-animation="lightSpeedInLeft" data-delay="0.9s">Reliable freight solutions that keep your business moving forward.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero-slider-img"> <img src="<%= config.subdir %>/assets/images/slide2.jpg" />
+					<div class="hero-section-content">
+						<div class="container">
+							<div class="hero-section-content-inner">
+								<h2 data-animation="lightSpeedInLeft" data-delay="0.5s">Ship Beyond Borders with Confidence</h2>
+								<p class="subtext" data-animation="lightSpeedInLeft" data-delay="0.9s">Efficient international and domestic shipping solutions tailored for you.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- form-contact-section -->
+			<div class="get-in-touch-form-section">
+				<div class="container">
+					<div class="contact-form-section">
+						<h4>Contact Us for Hassle-Free Shipping!</h4>
+						<form class="get-in-touch-form" method="post" action="<%= config.subdir %>/capture-lead">
+							<input type="hidden" name="_nonce" value="<%= nonces['form-lead'] %>" />
+							<div class="form-row half-row">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Name" required >
+							</div>
+							<div class="form-row half-row">
+								<input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company" required>
+							</div>
+							<div class="form-row half-row">
+								<select class="form-control js-countries-select" id="companyCountry" name="companyCountry" required data-placeholder="Country">
+									<option></option>
+								</select>
+							</div>
+							<div class="form-row half-row">
+								<label class="input-group">
+									<div class="input-group-text">+</div>
+									<div class="input-group-area"><input type="tel" class="form-control" id="phone" name="phone" placeholder="Contact" required></div>
+								</label>
+							</div>
+							<div class="form-row full-row">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Email" aria-describedby="emailHelp" required>
+							</div>
+							<div class="form-row half-row">
+								<select class="form-control js-countries-select" id="countryOrigin" name="countryOrigin" data-placeholder="Origin" required>
+									<option></option>
+								</select>
+							</div>
+							<div class="form-row half-row">
+								<select class="form-control js-countries-select" id="countryOfDestination" name="countryOfDestination" data-placeholder="Destination" required>
+									<option></option>
+								</select>
+							</div>
+							<div class="form-row full-row">
+								<textarea class="form-control" name="message" placeholder="Message"></textarea>
+							</div>
+							<div class="badge">
+								<input name="submit" type="submit" value="SUBMIT" class="btn rounded-pill fs-5 px-5 mt-1" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div> 
+	<!-- Stats Showcase Section -->
+	<div class="stats-showcase js-animate-into-viewport" data-animation="fadeInUp" data-delay="0.3s">
+		<div class="container">
+			<div class="stats-grid">
+				<div class="stat-item" data-animation="fadeInUp" data-delay="0.4s">
+					<div class="stat-icon">
+						<i class="fas fa-clock"></i>
+					</div>
+					<h3><span class="counter">25</span>+</h3>
+					<p>Years of Excellence</p>
+				</div>
+				<div class="stat-item" data-animation="fadeInUp" data-delay="0.6s">
+					<div class="stat-icon">
+						<i class="fas fa-globe-asia"></i>
+					</div>
+					<h3><span class="counter">200</span>+</h3>
+					<p>Countries Served</p>
+				</div>
+				<div class="stat-item" data-animation="fadeInUp" data-delay="0.8s">
+					<div class="stat-icon">
+						<i class="fas fa-users"></i>
+					</div>
+					<h3><span class="counter">5000</span>+</h3>
+					<p>Happy Clients</p>
+				</div>
+				<div class="stat-item" data-animation="fadeInUp" data-delay="1.0s">
+					<div class="stat-icon">
+						<i class="fas fa-ship"></i>
+					</div>
+					<h3><span class="counter">98</span>%</h3>
+					<p>On-Time Delivery</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Offering-Section -->
+
+		<div class="details-section-one js-animate-into-viewport" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="container">
+				<div class="row">
+					<div class="choose-content">
+						<h2>Why Choose us?</h2>
+						<p>Express Inc. offers specialized Full Container Load (FCL) solutions tailored to Southeast Asia's diverse logistics needs. With a strong presence in key markets, we ensure your goods are delivered safely and efficiently.</p>
+					</div>
+					<div class="section-img">
+						<img src="<%= config.subdir %>/assets/images/vecteezy-2.jpg" />
+					</div>
+				</div>
+			</div>
+		</div> 
+
+		<!-- Timeline Section -->
+		<div class="timeline-section js-animate-into-viewport" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="container">
+				<div class="section-header text-center">
+					<h2>Our Process</h2>
+					<p class="lead">How We Deliver Excellence</p>
+				</div>
+				<div class="timeline">
+					<div class="timeline-item" data-animation="fadeInLeft" data-delay="0.4s">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<div class="timeline-icon">
+								<i class="fas fa-comments"></i>
+							</div>
+							<h4>Initial Consultation</h4>
+							<p>Understanding your specific shipping requirements and challenges</p>
+						</div>
+					</div>
+					<div class="timeline-item" data-animation="fadeInRight" data-delay="0.6s">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<div class="timeline-icon">
+								<i class="fas fa-route"></i>
+							</div>
+							<h4>Route Planning</h4>
+							<p>Designing optimal shipping routes and schedules</p>
+						</div>
+					</div>
+					<div class="timeline-item" data-animation="fadeInLeft" data-delay="0.8s">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<div class="timeline-icon">
+								<i class="fas fa-truck-loading"></i>
+							</div>
+							<h4>Implementation</h4>
+							<p>Executing the shipping plan with precision and care</p>
+						</div>
+					</div>
+					<div class="timeline-item" data-animation="fadeInRight" data-delay="1.0s">
+						<div class="timeline-dot"></div>
+						<div class="timeline-content">
+							<div class="timeline-icon">
+								<i class="fas fa-chart-line"></i>
+							</div>
+							<h4>Monitoring & Support</h4>
+							<p>Real-time tracking and dedicated customer support</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- Details Section -->
+
+
+		<div class="supply-chain-section js-animate-into-viewport" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="container">
+				<h2>Looking to Streamline Your Supply Chain?</h2>
+				<p>Partner with Express Inc. for smooth and efficient FCL services across Southeast Asia.</p> <span><a href="#name" class="contact-btn js-st-cf">Contact Us Today</a></span>
+			</div>
+		</div> <!-- Footer -->
+		<div class="footer-section js-animate-into-viewport" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="container">
+				<div class="footer-row">© 2025 Express Inc. All rights reserved.</div>
+			</div>
+		</div>
+	</div><!-- <div class="container-fluid"></div> -->
+
+	<script src="<%= config.subdir %>/assets/js/custom.js"></script>
+</body>
+
+</html>
