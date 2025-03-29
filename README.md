@@ -32,5 +32,5 @@ A secure, fast, and mobile-friendly lead generation landing page powered by Node
 
 ## Video Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ndEV7vTXfzU" frameborder="0" allowfullscreen></iframe>
+[![Express.js Landing Page | Secure & Responsive Lead Generation](https://img.youtube.com/vi/ndEV7vTXfzU/0.jpg)](https://www.youtube.com/watch?v=ndEV7vTXfzU)
 
